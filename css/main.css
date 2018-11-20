@@ -1,0 +1,395 @@
+/* ----- Specification ----- */
+
+body {
+	position: relative;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.2;
+	letter-spacing: 0.02em;
+	padding: 0;
+	margin: 0 auto;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+}
+
+h1 {
+	font-family: 'Gotham Pro';
+	font-size: 50px;
+	font-weight: 400;
+	padding: 0;
+	margin: 0;
+}
+
+h2 {
+	font-family: 'Gotham Pro';
+	font-size: 30px;
+	font-weight: 400;
+	color: #fff;
+	letter-spacing: -0.01em;
+	padding: 0;
+	margin: 0;
+}
+
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+/* ----- Section First ----- */
+
+.first {
+	position: relative;
+	background: url(../img/iceberg-top-bg.jpg) no-repeat 100% 100% / cover;
+	background-size: 100% 100%;
+	width: 100vw;
+	height: 100vh;
+	color:  #0d319c;
+}
+
+.title-first {
+	position: absolute;
+	top: 135px;
+	left: 70px;
+	max-width: 750px;
+	letter-spacing: -0.012em;
+}
+
+.points__round {
+	border-radius: 100%;
+	border: 1px solid #ff0303;
+}
+
+.points__item {
+	position: absolute;
+	font-family: 'Lato';
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.points__item_targ {
+	top: 34.3vh;
+	left: 55vw;
+}
+
+.points__item_gip {
+	top: 55.7vh;
+    left: 26.9vw;
+}
+
+.points__item_risk {
+	top: 67.3vh;
+	left: 80.4vw;
+}
+
+.points__item_comp {
+	top: 70.2vh;
+	left: 46.8vw;
+}
+
+.points__item:after {
+	position: absolute;
+	font-size: 20px;
+	font-weight: 400;
+	width: 200px;
+}
+
+.points__item_targ:after {
+	top: 13px;
+	left: 61px;
+	content: 'Цель по HbA1c';
+}
+
+.points__item_gip:after {
+	top: -32px;
+	left: -52px;
+	content: 'Гипогликемия';
+}
+
+.points__item_risk:after {
+	top: -30px;
+	left: -32px;
+	content: 'СС риски';
+}
+
+.points__item_comp:after {
+	top: -32px;
+	left: -110px;
+	content: 'Осложнения СД';
+}
+
+.scroll__text {
+	font-family: 'Gotham Pro';
+	position: absolute;
+	left: 50%;
+	bottom: 53px;
+	font-size: 15px;
+	font-weight: 400;
+	color: #fff;
+	margin-left: -40px;
+	letter-spacing: -0.02em;
+}
+
+.scroll__row {
+	position: absolute;
+	left: 50%;
+	bottom: 25px;
+	display: block;
+	transform: rotate(-45deg);
+	border-bottom: 3px solid #fff;
+	border-left: 3px solid #fff;
+	height: 27px;
+	width: 27px;
+}
+
+.scroll:hover {
+	position: absolute;
+	bottom: 0;
+	background: url(../img/orange.png) no-repeat center bottom / cover;
+	background-size: 100% 100%;
+	height: 100px;
+	width: 100%;
+	transition: all 0.5s ease;
+	opacity: 0.8;
+}
+
+/* ----- Pulse Animation ----- */
+
+.points__pulse {
+    height: 0px;
+    width: 0px;
+    background: #da442b;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    opacity: 1;
+    -webkit-animation: shake 2s infinite linear;
+    animation: shake 2s infinite linear;
+    -webkit-animation-delay: .9s;
+    animation-delay: .9s;
+}
+
+.points__pulse:after,
+.points__pulse:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    background-color: #fea592;
+    border-radius: 100%;
+    border: 1px solid #d63d2c;
+    -webkit-animation: pulse 1.8s infinite ease-out;
+    animation: pulse 1.8s infinite ease-out;
+}
+
+.points__pulse:before {
+    margin: auto 0 auto 0;
+    height: 65px;
+    width: 65px;
+    opacity: 1; 
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+
+.points__pulse:after {
+    margin: auto 0 auto 0;
+    height: 65px;
+    width: 65px;
+    -webkit-animation-delay: 1.6s;
+    animation-delay: 1.8s;
+    opacity: 1;
+}
+
+@-webkit-keyframes shake {
+  0% {
+      transform: translateX(0);
+  }
+  25% {
+      transform: translateX(0);
+  }
+  50% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+@keyframes shake {
+  0% {
+     transform: translateX(0);
+  }
+  25% {
+     transform: translateX(0);
+  }
+  50% {
+     transform: translateX(0);
+  }
+  100% {
+     transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+}
+
+.points__round_targ,
+.points__pulse_targ:after,
+.points__pulse_targ:before {
+	width: 49px;
+	height: 49px;
+}
+
+.points__round_gip,
+.points__pulse_gip:after,
+.points__pulse_gip:before {
+	width: 24px;
+	height: 24px;
+}
+
+.points__round_risk,
+.points__pulse_risk:after,
+.points__pulse_risk:before {
+	width: 14px;
+	height: 14px;
+}
+
+.points__round_comp,
+.points__pulse_comp:after,
+.points__pulse_comp:before {
+	width: 14px;
+	height: 14px;
+}
+
+/* ----- Section Second ----- */
+
+.second {
+	position: relative;
+	background: url(../img/iceberg-center-bg.jpg) no-repeat 100% 100% / cover;
+	background-size: 100% 100%;
+	width: 100vw;
+	height: 100vh;
+	color:  #0d319c;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.title-second {
+	position: absolute;
+	top: 32vh;
+	left: 50%;
+	text-align: center;
+	color: #fff;
+	font-weight: 300;
+	max-width: 490px;
+	letter-spacing: -0.02em;
+	margin-left: -240px;
+}
+
+.ice__item {
+	position: absolute;
+	z-index: 5;
+}
+
+.ice__item_1 {
+	background: url(../img/ice-copy-1.png) no-repeat center center / cover;
+	top: 5vh;
+	right: -6vw;
+	width: 215px;
+	height: 205px;
+}
+
+.ice__item_2 {
+	background: url(../img/ice-copy-2.png) no-repeat center center / cover;
+	top: 57.5vh;
+	left: 22.6vw;
+	width: 103px;
+	height: 101px;
+}
+
+.ice__item_3 {
+	background: url(../img/ice-copy-3.png) no-repeat center center / cover;
+	top: 21vh;
+    left: 8vw;
+	width: 41px;
+	height: 39px;
+}
+
+.ice__item_4 {
+	background: url(../img/ice-copy-4.png) no-repeat center center / cover;
+	top: 76vh;
+	left: 70vw;
+	width: 75px;
+	height: 76px;
+}
+
+/* ----- Section Third ----- */
+
+.third {
+	background: url(../img/iceberg-bottom-bg.jpg) no-repeat 100% 100% / cover;
+	background-size: 100% 100%;
+	width: 100vw;
+	height: 100vh;
+	color:  #0d319c;
+}
+
+.fp-slide {
+	position: relative;
+}
+
+.title-third {
+	position: absolute;
+	top: 16.5vh;
+	left: 10.6vw;
+}
+
+.content {
+	width: 100vw;
+	text-align: center;
+}
+
+.content img {
+	width: 70%;
+	max-width: 768px;
+}
+
+/*----- Strip Slider -----*/
+
+#scroller {
+	position: absolute;
+	left: 50%;
+	bottom: 40px;
+	z-index: 100;
+	width: 635px;
+	height: 12px;
+	margin-left: -317px;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Тестовое задание</title>
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<link rel="stylesheet" href="css/range.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/fonts.css">
+</head>
+<body>
+	<div id="fullpage">
+		<div class="first section" id="first">
+			<h1 class="title-first">
+				Всегда ли цели терапии СД2 на поверхности?
+			</h1>
+			<ul class="points">
+				<li class="points__item points__item_targ">
+					<div class="points__round points__round_targ"></div>
+					<div class="points__pulse points__pulse_targ"></div>
+				</li>
+				<li class="points__item points__item_gip">
+					<div class="points__round points__round_gip"></div>
+					<div class="points__pulse points__pulse_gip"></div>
+				</li>
+				<li class="points__item points__item_risk">
+					<div class="points__round points__round_risk"></div>
+					<div class="points__pulse points__pulse_risk"></div>
+				</li>
+				<li class="points__item points__item_comp">
+					<div class="points__round points__round_comp"></div>
+					<div class="points__pulse points__pulse_comp"></div>
+				</li>
+			</ul>
+			<a href="#second" class="scroll">
+				<span class="scroll__text">
+					Листайте вниз
+				</span>
+				<div class="scroll__row"></div>
+			</a>
+		</div>
+		<div class="second section" id="second">
+			<h1 class="title-second">
+				Основа терапии - патогенез СД2
+			</h1>
+			<ul class="ice">
+				<li class="ice__item ice__item_1"></li>
+				<li class="ice__item ice__item_2"></li>
+				<li class="ice__item ice__item_3"></li>
+				<li class="ice__item ice__item_4"></li>
+			</ul>
+			<a href="#third" class="scroll">
+				<span class="scroll__text">
+					Листайте вниз
+				</span>
+				<div class="scroll__row"></div>
+			</a>
+		</div>
+		<div class="third section" id="third">
+			<div class="fp-slides">
+				<div class="">
+					<div class="fp-slide" id="slide1">
+						<h2 class="title-third">
+							Звенья патогенеза СД2
+						</h2>
+						<div class="content">
+							<img src="img/catena-1.png" alt="Звенья патогенеза СД2">
+						</div>
+						<ul class="ice">
+							<li class="ice__item ice__item_5"></li>
+							<li class="ice__item ice__item_6"></li>
+							<li class="ice__item ice__item_7"></li>
+						</ul>
+					</div>
+					<div class="fp-slide" id="slide2">
+						<h2 class="title-third">
+							Смертельный октет
+						</h2>
+						<div class="content">
+							<img src="img/catena-2.png" alt="Смертельный октет">
+						</div>
+					</div>
+					<div class="fp-slide" id="slide3">
+						<h2 class="title-third">
+							Звенья патогенеза СД2
+						</h2>
+						<div class="content">
+							<img src="img/catena-3.png" alt="Звенья патогенеза СД2">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="dragdealer">
+				<span id="contentSlider"></span>
+				<div id="slider"></div>
+				<span class="dragdealer__number">
+					1988
+				</span>
+				<span class="dragdealer__number">
+					2009
+				</span>
+				<span class="dragdealer__number">
+					2016
+				</span>
+			</div>
+			<!-- <input type="range" id="scroller" min="0" max="50" step="1" value="10" oninput="fc()"> -->
+		</div>
+	</div>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.fullpage.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
